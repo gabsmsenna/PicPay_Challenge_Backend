@@ -1,6 +1,6 @@
 package dev.gabrielsenna.Desafio_Spring.service;
 
-import dev.gabrielsenna.Desafio_Spring.WalletDataAlreayExistsException;
+import dev.gabrielsenna.Desafio_Spring.exception.WalletDataAlreayExistsException;
 import dev.gabrielsenna.Desafio_Spring.controller.dto.CreateWalletDto;
 import dev.gabrielsenna.Desafio_Spring.entity.Wallet;
 import dev.gabrielsenna.Desafio_Spring.repository.WalletRepository;
@@ -22,7 +22,6 @@ public class WalletService {
         if (walletExist.isPresent()) {
             throw new WalletDataAlreayExistsException("Cpf/Cnpj or Email already exists");
         }
-
         return walletRepository.save(walletDto.toWallet());
     }
 }

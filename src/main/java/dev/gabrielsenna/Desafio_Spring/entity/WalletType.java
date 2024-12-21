@@ -50,6 +50,7 @@ public class WalletType {
         private Long id;
         private String description;
 
+
         public WalletType getWalletType() {
             return new WalletType(id, description);
         }

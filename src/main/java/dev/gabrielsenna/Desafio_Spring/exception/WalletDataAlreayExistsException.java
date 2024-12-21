@@ -1,6 +1,5 @@
-package dev.gabrielsenna.Desafio_Spring;
+package dev.gabrielsenna.Desafio_Spring.exception;
 
-import dev.gabrielsenna.Desafio_Spring.exception.PicPayException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 

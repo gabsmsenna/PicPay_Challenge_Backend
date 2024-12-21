@@ -9,7 +9,6 @@ public class PicPayException extends RuntimeException {
         var pb = ProblemDetail.forStatus((HttpStatus.INTERNAL_SERVER_ERROR));
 
         pb.setTitle("PicPay Internal Server Error");
-
         return pb;
     };
 }

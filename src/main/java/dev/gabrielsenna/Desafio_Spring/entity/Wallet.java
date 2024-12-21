@@ -13,6 +13,7 @@ public class Wallet {
     }
 
     public Wallet(Long id, String fullName, String cpfCnpj, String email, String password, BigDecimal balance, WalletType walletType) {
+
         this.id = id;
         this.fullName = fullName;
         this.cpfCnpj = cpfCnpj;

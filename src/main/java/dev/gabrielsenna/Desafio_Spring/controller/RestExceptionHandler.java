@@ -29,5 +29,6 @@ public class RestExceptionHandler {
         return pb;
     }
 
+
     private record InvalidParam(String fieldName, String reason){}
 }
