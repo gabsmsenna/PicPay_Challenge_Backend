@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tb_transfer")
-public class Transaction {
+public class Transfer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -16,7 +16,6 @@ public class Transaction {
     @JoinColumn(name = "wallet_sender_id")
     @ManyToOne
     private Wallet sender;
-
 
     @ManyToOne
     @JoinColumn(name = "wallet_receiver_id")
@@ -27,6 +26,12 @@ public class Transaction {
 
     public UUID getId() {
         return id;
+    }
+
+    public Transfer(Wallet sender, Wallet receiver, BigDecimal value) {
+        this.sender = sender;
+        this.receiver = receiver;
+        this.value = value;
     }
 
     public void setId(UUID id) {

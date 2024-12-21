@@ -1,10 +1,9 @@
 package dev.gabrielsenna.Desafio_Spring.service;
 
 import dev.gabrielsenna.Desafio_Spring.client.NotificationClient;
-import dev.gabrielsenna.Desafio_Spring.entity.Transaction;
+import dev.gabrielsenna.Desafio_Spring.entity.Transfer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,7 +17,7 @@ public class NotificationService {
         this.notificationClient = notificationClient;
     }
 
-    public void sendNotification(Transaction transaction) {
+    public void sendNotification(Transfer transaction) {
 
         try {
             logger.info("Sending notification...");

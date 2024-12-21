@@ -1,7 +1,7 @@
 package dev.gabrielsenna.Desafio_Spring.service;
 
 import dev.gabrielsenna.Desafio_Spring.client.AuthorizationClient;
-import dev.gabrielsenna.Desafio_Spring.entity.Transaction;
+import dev.gabrielsenna.Desafio_Spring.controller.dto.TransferDto;
 import dev.gabrielsenna.Desafio_Spring.exception.PicPayException;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class AuthorizationService {
         this.authorizationClient = authorizationClient;
     }
 
-    public boolean isAuthorized(Transaction transfer) {
+    public boolean isAuthorized(TransferDto transfer) {
         var response = authorizationClient.isAuthorized();
 
         if (response.getStatusCode().isError()) {
